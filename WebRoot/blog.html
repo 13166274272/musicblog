@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_1460304842_0987742.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js" ></script>
+	</head>
+	<body style="background:url(img/bg2.jpg)">
+		<div class="header"></div>
+		<div class="container">
+			<div class="mbox">
+				<img src="http://demo.cssmoban.com/cssthemes2/cctp_37_pixel/css/images/slide-1.jpg" alt="" width="950" height="350"/>
+				<div class="tit_over">
+					<h1><i class="iconfont icon-music fz32"></i>当美好事物的改变的时候，我们总是去拥抱!!!</h1>
+					<p>2015-12-12 @keke</p>
+					<a href="#" class="ke_op"><i class="iconfont icon-play fz64"></i></a>
+				
+				</div>
+			</div>
+		
+			<div class="content mt28">
+				一首歌唱到最后还会剩下什么？<br/><br/>
+				无非相遇别离、无非是找到自己的位置，并安然地待下去。除此之外，别无其他。值得庆幸的是，我们依然能够剔除掉表面的玩意，内敛而踏实地活着。在灿烂的夜晚里，依然能够笑着流出了泪。<br/><br/>
+				本期音乐为华语摇滚乐专题。<br/>
+			</div> 
+			
+			<div class="relation">
+				<h1><i class="iconfont icon-star fz32"></i>相似主题</h1>
+				<ul>
+					<li><a href="#"><img src="http://7xkszy.com2.z0.glb.qiniucdn.com/pics/albums/9912/cover.jpg" alt="" /></a></li>
+					<li><a href="#"><img src="http://7xkszy.com2.z0.glb.qiniucdn.com/pics/albums/9913/cover.jpg" alt="" /></a></li>
+					<li><a href="#"><img src="http://7xkszy.com2.z0.glb.qiniucdn.com/pics/albums/9914/cover.jpg" alt="" /></a></li>
+					<li><a href="#"><img src="http://7xkszy.com2.z0.glb.qiniucdn.com/pics/albums/9915/cover.jpg" alt="" /></a></li>
+				</ul>
+			</div>
+			
+			<div id="comment">
+			</div>
+			
+				<audio src="mp3/03.mp3" id="audio" ></audio>
+				<audio src="mp3/03.mp3" id="audio" ></audio>
+			
+		</div>
+		<script>
+		
+		
+			/*
+			 
+			 //音乐播放器---用flash开发的 actionscript进行开发---支持ie
+			 html5--audio/video--音乐播放和视频播放--游戏开发音效
+			 
+			 1：播放暂停
+			 2：时间的显示
+			 3：进度条的显示
+			 4：音乐的切换（上一首和下一首）
+			 5：静音
+			 6：随机播放，顺序播放，单曲循环
+			 7：歌词
+			 
+			 * */
+		
+			var kekeMusic = {
+				audioDom:null,
+				init:function(){
+					this.audioDom = document.getElementById("audio");
+				},
+				play:function(){
+					this.audioDom.play();
+				},
+				stop:function(){
+					this.audioDom.pause();
+				}
+			};
+		
+			$(function(){
+				//播放器初始化
+				kekeMusic.init();
+				//播放开始和暂停
+				$(".ke_op").on("click",function(){
+					var $i = $(this).find("i");
+					if($i.hasClass("icon-play")){
+						$i.toggleClass("icon-play icon-pause");
+						kekeMusic.play();
+					}else{
+						$i.toggleClass("icon-pause icon-play");
+						kekeMusic.stop();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
